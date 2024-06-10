@@ -1,0 +1,52 @@
+calculate total salary of different types of employees
+name: payroll-app
+
+src
+	- models:
+employee:[employee.ts]
+	data members: id, name, basic, da, hra
+	method: calculateSalary
+				args: NA
+				return: number
+
+developer:[developer.ts]
+	data members: id, name, basic, da, hra, incentive
+	method: calculateSalary
+				args: NA
+				return: number
+
+hr:[hr.ts]
+	data members: id, name, basic, da, hra, gratuity
+	method: calculateSalary
+				args: NA
+				return: number
+
+	- repository
+		- employees.ts
+			an array of type employee
+
+	- manager
+		- employeemanager.ts
+			class: EmployeeManager
+			methods:
+				add: will help you to add a new employee object in the array
+					args: Employee
+					return: boolean
+
+				update: will help you to update an existing employee object in the array
+					args: Employee, id
+					return: boolean
+
+				delete: will help you to delete an existing employee object in the array
+					args: id
+					return: boolean
+
+				get: will help you to return an existing employee object in the array
+					args: id
+					return: Employee
+				getAll: will help you to return all existing employees from the array
+					args: NA
+					return: Employee array
+
+index.ts
+	call all the methods of EM
