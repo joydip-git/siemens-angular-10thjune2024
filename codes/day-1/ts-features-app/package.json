@@ -1,0 +1,13 @@
+{
+  "name": "ts-features-app",
+  "version": "1.0.0",
+  "scripts": {
+    "": ""
+  },
+  "author": "joydip",
+  "license": "ISC",
+  "description": "simple ts app",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

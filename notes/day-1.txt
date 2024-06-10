@@ -33,6 +33,66 @@ TypeScript:
 a. static type checking
 b. data typification
 
+New features in ES6+:
+1. let and const (ES6)
+2. class, constructor, extends and super (ES6)
+3. templated string (ES6)
+4. ES6 modules
+
+transpilation:
+a. JS code with ES6+ syntax to vanilla JS
+b. TS code to vanilla JS
+
+transpiler
+a. JS code with ES6+ syntax to vanilla JS => babel
+b. TS code to vanilla JS => typescript compiler (tsc)
+
+package.json file:
+command: >npm init [--yes]
+
+typescript installation:
+a. global installation:
+command: >npm i typescript --location=global
+
+b. applicaion specific installation:
+dev dependency:
+command: >npm i typescript -D (npm i typescript --save-dev)
+
+complete dependency:
+command: >npm i typescript (npm i typescript --save)
+
+modules:
+API for importing and exporting types from JS/TS/NS files
+
+module formats:
+a. ES6 module format [export/import]
+b. common js module format [defalut format for Node JS]
+person.js
+class Person{}
+module.exports ={ Person }
+
+index.js
+const {Person} = require('./person')
+
+c. amd (asynchronous module definitio) format
+define(['./person'],
+function(){
+	class Person{}
+})
+
+d. umd (universal module defnition) format
+
+module loader:
+require js [it ONLY understands AMD module format]
+system js
+
+
+
+
+
+
+
+
 
 
 
