@@ -38,6 +38,7 @@ New features in ES6+:
 2. class, constructor, extends and super (ES6)
 3. templated string (ES6)
 4. ES6 modules
+5. arrow function
 
 transpilation:
 a. JS code with ES6+ syntax to vanilla JS
@@ -87,6 +88,28 @@ require js [it ONLY understands AMD module format]
 system js
 
 
+
+header.html														header.js
+<h2 (click)="clicked()">{{message}}</h2>		function header(){
+																		this.message="Payroll App"
+										   							const clicked=()=>{}
+																		}
+
+
+footer.html
+<h3></h3>
+
+panel.html
+<nav>
+	<a href="">Home</a>
+	<a href="">Home</a>
+	<a href="">Home</a>
+</nav>
+
+container.html
+<div>
+......
+</div>
 
 
 

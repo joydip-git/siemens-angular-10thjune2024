@@ -26,6 +26,13 @@ hr:[hr.ts]
 			an array of type employee
 
 	- manager
+		- manager-contract.ts
+			ManagerContract<T>
+				- add(obj:T)
+				- update
+				- delete
+				- get
+				- getAll
 		- employeemanager.ts
 			class: EmployeeManager
 			methods:
