@@ -1,0 +1,39 @@
+1. JavaScript
+2. TypeScript
+
+3. Node JS
+
+
+https://github.com/joydip-git/siemens-angular-10thjune2024
+
+
+Chrome: V8 
+firefox: spidermonkey
+safari: JS Core
+
+2009 => Ryan Dahl => Node JS
+Angular JS 2010
+
+deno
+
+JS runtimes:
+browser
+node js, deno js, rhino js etc.
+
+
+two phases of JS execution:
+1. preparation stage: local variable and function declarations are registered/hoisted
+Note: function expressions are not hoisted
+you can't call function expressions before the expression
+2. execution stage
+
+ES6 (2015)
+
+TypeScript:
+a. static type checking
+b. data typification
+
+
+
+
+
