@@ -8,22 +8,6 @@ const isEven = function (num) {
 const isOdd = (num) => num % 2 !== 0 ? true : false
 numbers.filter((num) => num % 2 !== 0)
 numbers.find((num) => num === 4)
-
-function outer() {
-    this.x = 10
-    // let ref = this
-    // let inner = function () {
-    //     this.y = 20
-    //     console.log(this.x + this.y);
-    //     //console.log(ref.x + this.y);
-    // }    
-    //inner = inner.bind(this)
-    const inner = () => {
-        this.y = 20
-        console.log(this.x + this.y);
-        //console.log(ref.x + this.y);
-    }
-    inner()
-}
-new outer()
+numbers.sort((a, b) => b - a)
+numbers.forEach((a) => console.log(a))
 

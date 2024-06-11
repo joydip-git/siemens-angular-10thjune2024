@@ -29,3 +29,5 @@ export class EmployeeManager implements IManagerContract<Employee, number> {
     }
 
 }
+
+console.log(module);

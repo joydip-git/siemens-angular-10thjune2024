@@ -3,13 +3,14 @@
     "rootDir": "src",
     "outDir": "dist",
     "target": "ES5",
-    "module": "AMD",
+    "module": "CommonJS",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "DOM",
       "ES2022"
-    ]
+    ],
+    "moduleResolution": "Node"
   },
   "exclude": [
     "node_modules"

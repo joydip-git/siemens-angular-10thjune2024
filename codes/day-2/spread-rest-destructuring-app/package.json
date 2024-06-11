@@ -1,0 +1,15 @@
+{
+  "name": "spread-rest-destructuring-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "app": "ts-node ./index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

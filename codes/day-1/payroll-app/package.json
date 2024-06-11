@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "compile-app": "tsc",
-    "compile-app:watch": "tsc --watch"
+    "compile-app:watch": "tsc --watch",
+    "app": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "joydip",
   "license": "ISC",
   "description": "payroll app to calculate salary of employees",
   "devDependencies": {
+    "@types/node": "^20.14.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
