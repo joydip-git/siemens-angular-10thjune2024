@@ -1,0 +1,17 @@
+Angular Command Line Interface (CLI) tool:
+installation: >npm install @angular/cli --location=global
+executable: ng
+
+create an angular application:
+>ng new <app-name>
+
+Angular:
+	a. it is a client-side framework
+	a. helps you create single page application (SPA)
+	b. offers you mv-* architectural pattern
+	c. it helps you build a complete UI based on series of components
+	d. it offers you techniques to write reusable piece of code once (services)
+	e. offers you "binding" feature to pass data from code to view and vice versa
+	f. provides you with built-in facilities for making HTTP requests
+	g. provides you a DI framework
+
