@@ -4,10 +4,25 @@ import { IManagerContract } from "./manager-contract";
 
 export class EmployeeManager implements IManagerContract<Employee, number> {
     add(obj: Employee): boolean {
-        throw new Error("Method not implemented.");
+        const foundIndex = employees.findIndex((e) => e.id === obj.id)
+        if (foundIndex === -1) {
+            employees.push(obj)
+            return true
+        } else
+            return false
     }
     update(obj: Employee, id: number): boolean {
-        throw new Error("Method not implemented.");
+        const foundIndex = employees.findIndex((e) => e.id === id)
+
+        if (foundIndex !== -1) {
+            const updatedObj = {
+                ...employees[foundIndex],
+                ...obj
+            }
+            employees.splice(foundIndex, 1, <Employee>updatedObj)
+            return true
+        } else
+            return false
     }
     delete(id: number): boolean {
         const foundIndex = employees.findIndex((e) => e.id === id)
@@ -25,9 +40,9 @@ export class EmployeeManager implements IManagerContract<Employee, number> {
             return null
     }
     getAll(): Employee[] {
-        throw new Error("Method not implemented.");
+        return [...employees]
     }
 
 }
 
-console.log(module);
+//console.log(module);

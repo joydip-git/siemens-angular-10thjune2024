@@ -3,8 +3,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "target": "ES5",
-    "module": "CommonJS",
+    "module": "AMD",
     "strict": true,
+    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "DOM",
