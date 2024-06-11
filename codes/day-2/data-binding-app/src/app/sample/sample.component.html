@@ -1,0 +1,11 @@
+<ul *ngIf="names.length>0">
+    List of Names
+    <li *ngFor="let name of names">
+        <span *ngIf="name.includes('a')">{{name}}</span>
+    </li>
+</ul>
+
+<br>
+<div ngClass="{{show?'common':'latest'}}">
+    <span>{{person.name}}</span>
+</div>

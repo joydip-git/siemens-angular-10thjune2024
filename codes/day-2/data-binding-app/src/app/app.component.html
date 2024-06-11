@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+<br>
+
+<!-- #txtArea => template reference variable (a variable to store reference to the DOM element) -->
+<label for="txtTitle">Enter New Title: &nbsp;</label>
+<input type="text" id="txtTitle" [style.width.px]="width" [value]="title" (keyup)="changeTitle(txtArea.value)" #txtArea>
+
+<br>
+<!-- <button type="button" (click)="changeTitle(txtArea.value)">Change Title</button> -->
+<br>
+<app-sample></app-sample>

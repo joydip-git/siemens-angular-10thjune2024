@@ -15,3 +15,50 @@ Angular:
 	f. provides you with built-in facilities for making HTTP requests
 	g. provides you a DI framework
 
+
+component:
+view (design) + code
+
+binding:
+a. data binding: pass data from code to view and  bind the code data in the view element
+	i. interpolation: always converts the data to bind to string
+	ii. property binding: does not convert the value to bind to string
+
+b. event binding: pass data from view to code through an event, where event is bound to a method of a class
+
+
+directive: used like attribute of an HTML element and it enhances the behavior of an HTML element
+a. structural directive: manipulate DOM (*)
+b. attribute directive: extend the beahvior or an HTML element (DO NOT manipulate DOM)
+c. component directive (@Component)
+
+package: @angular/platform-browser
+module: BrowserModule
+
+@NgModule({ declarations:[], imports:[CommonModule] exports:[CommonModule]})
+export class BrowserModule{}
+
+
+package: @angular/common
+module: CommonModule
+
+@NgModule({ declarations:[NgForOfDirective], exports:[NgForOfDirective]})
+export class CommonModule{}
+
+
+*ngFor, *ngIf, *ngSwitch
+
+@Directive({
+	selector:'[ngFor]'	
+})
+export class NgForOfDirective{
+	method(syntax, template){
+	}
+}
+
+
+
+
+
+
+
