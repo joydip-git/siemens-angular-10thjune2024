@@ -15,9 +15,10 @@ create an angular app: pms-app
 create a feature module forlder inside "app" directory: "products" containing "products.module.ts" file
 register the ProductsModule class with AppModule in "app.module.ts" file
 
-Now, create a component in  products/components/product-list folder
-Create a service "ProductService" in "product.service.ts" file
+Now, 
+create a component in  products/components/product-list folder
+Create a service "ProductService" in "product.service.ts" file in "services" folder
 create a method to fetch all products from the backend server
-
 register the service with ProductsModule class
+
 consume the service in ProductListComponent and display all the records in a table (display only image, name, price and rating of each product)

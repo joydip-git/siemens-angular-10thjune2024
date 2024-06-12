@@ -59,8 +59,46 @@ constructor(private service:SomeService){
 
 5. Observable
 
+export interface ApiResponse<T>
+{
+	message:string;
+	data:T|null;
+}
+
+this.http.get<ApiResponse<Product[]>>('http://localhost:3003/products')
+
+this.http.get<ApiResponse<Product>>('http://localhost:3003/products/'+id)
 
 
+app
+	app.component.html
+	app.component.ts
+	app.component.css
+	app.component.spec.ts
+	app.module.ts
+	app-routing.module.ts
+
+	products
+		products.module.ts => ProductsModule
+
+		components
+			product-list
+				product-list.component.html
+				product-list.component.ts => ProductListComponent
+				product-list.component.css
+				product-list.component.spec.ts
+
+			product-detail
+				product-detail.component.html
+				product-detail.component.ts => ProductDetailComponent
+				product-detail.component.css
+				product-detail.component.spec.ts
+
+		directives
+
+		pipes
+
+		services
 
 
 
