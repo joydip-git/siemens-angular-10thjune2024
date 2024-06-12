@@ -34,6 +34,32 @@ A.prototype.method=function(){}
 var obj = new A();
 obj.method()
 
+3. Service
+a. create the service [best practice: decorate the class with @Injectable()]
+b. register a service provider
+	providers:[SomeService]
+	A. component level
+	B. feature module level
+	C. root module level
+c. consume the service 
+
+token			and 	service
+SomeService and SomeService
+
+constructor(private service:SomeService){
+}
+
+
+4. HTTP requests
+	built-in service class: HttpClient
+	built-in module name: HttpClientModule
+	package-name: @angular/common/http
+
+	=> get(), post(), put(), patch(), delete() ....
+
+5. Observable
+
+
 
 
 

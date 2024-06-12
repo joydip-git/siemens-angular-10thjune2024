@@ -1,0 +1,37 @@
+<h2>List of Posts</h2>
+<br>
+
+<ng-template #loadingTemplate>
+    <span>Loading....</span>
+</ng-template>
+<ng-template #errorTemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+<ng-template #norecordtemplate>
+    <span> No records </span>
+</ng-template>
+
+<div *ngIf="isFetchOver;else loadingTemplate">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <table *ngIf="postRecords && postRecords.length>0;else norecordtemplate">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of postRecords">
+                    <td (click)="setSelectedId(p.id)">
+                        <u>{{p.id}}</u>
+                    </td>
+                    <td>{{p.title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<br>
+<app-post-detail [selectedId]="selectedPostId"></app-post-detail>

@@ -1,0 +1,23 @@
+<ng-template #loadingTemplate>
+    <span>Loading....</span>
+</ng-template>
+<ng-template #errorTemplate>
+    <span>{{errorMessage}}</span>
+</ng-template>
+<ng-template #norecordtemplate>
+    <span> No records </span>
+</ng-template>
+<div *ngIf="selectedId>0">
+    <div *ngIf="isFetchOver;else loadingTemplate">
+        <div *ngIf="errorMessage==='';else errorTemplate">
+            <div *ngIf="selectedPost">
+                details of post#{{selectedPost.id}}
+                <br>
+                <div>
+                    <label for="postBody">Body: &nbsp;</label>
+                    {{selectedPost.body}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
