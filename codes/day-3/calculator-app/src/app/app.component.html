@@ -2,4 +2,8 @@
 
 <br>
 
-<app-result [resultValue]="result"></app-result>
+<button type="button" (click)="changeShow()">{{show?'Hide':'Show'}}</button>
+<div *ngIf="show">
+    <!-- <app-result [resultValue]="result"></app-result> -->
+    <app-result></app-result>
+</div>

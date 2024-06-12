@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   result = 0
+  show = false
   receiveResult(value: number) {
     this.result = value
+    this.show = true
+  }
+  changeShow() {
+    this.show = !this.show
   }
 }

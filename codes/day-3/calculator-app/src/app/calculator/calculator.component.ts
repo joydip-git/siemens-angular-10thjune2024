@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ResultRepository } from '../repository/result-repo';
 
 @Component({
   selector: 'app-calculator',
@@ -10,6 +11,10 @@ export class CalculatorComponent {
   first = 0
   second = 0
   result = 0
+
+  constructor(private _repo: ResultRepository) {
+
+  }
 
   @Output() resultCalculated = new EventEmitter<number>()
 
@@ -43,7 +48,7 @@ export class CalculatorComponent {
       default:
         break;
     }
-
+    this._repo.publish(this.result)
     this.resultCalculated.emit(this.result)
   }
 }

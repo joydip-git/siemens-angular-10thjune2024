@@ -10,3 +10,30 @@
 using NG tool to generate: 
 (root path is "app" directory)
 component: ng generate/g component/c parent --skip-tests --standalone false
+
+2. Lifecycle of components and lifecyle hooks:
+		x    => OnX      => ngOnX
+	changes => OnChanges => ngOnChanges
+	init    => OnInit    => ngOnInit
+	destroy => OnDestroy => ngOnDestroy
+
+method()
+ref.method()
+new method()
+
+class A{
+	result=0
+	method=()=>{}
+}
+
+function A(){
+	this.result = 0
+}
+A.prototype.method=function(){}
+
+var obj = new A();
+obj.method()
+
+
+
+
