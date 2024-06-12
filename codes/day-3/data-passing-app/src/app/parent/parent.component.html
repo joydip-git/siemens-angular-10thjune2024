@@ -1,0 +1,7 @@
+<p>It is parent component</p>
+<br>
+<span> Data Received from Nested: &nbsp; {{receivedNestedData}}</span>
+<br />
+<button type="button" (click)="updateParentData()">Change Parent Data</button>
+<br>
+<app-nested [inputData]="parentData" (nestedDataChanged)="receiveNestedData($event)"></app-nested>

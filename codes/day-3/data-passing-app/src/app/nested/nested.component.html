@@ -1,0 +1,7 @@
+<p>this is nsted component</p>
+<p>Value received from parent: &nbsp; {{inputData}}</p>
+
+<div>
+    <label for="txtValue">Enter value: &nbsp;</label>
+    <input type="text" id="txtValue" [value]="nestedData" (keyup)="passValue(valueInput.value)" #valueInput>
+</div>

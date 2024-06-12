@@ -1,0 +1,12 @@
+1. pass data from one component to another
+	a. pass data from parent to nested component: 
+		@Input() prop-name [@angular/core]
+
+	b. pass data from nested to its parent component
+		@Output() event-property = new EventEmitter<T>()
+
+		event-property.emit(Ttypedata)
+
+using NG tool to generate: 
+(root path is "app" directory)
+component: ng generate/g component/c 
