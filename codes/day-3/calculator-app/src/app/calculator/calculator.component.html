@@ -1,0 +1,38 @@
+<form>
+    <fieldset class="fieldset-style">
+        <legend>Calculator</legend>
+        <div>
+            <label for="radioAdd">Add &nbsp;</label>
+            <input type="radio" name="calculation" id="radioAdd" (change)="updateChoice(1)">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="radioSubtract">Subtract &nbsp;</label>
+            <input type="radio" name="calculation" id="radioSubtract" (change)="updateChoice(2)">
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="radioMultiply">Multiply &nbsp;</label>
+            <input type="radio" name="calculation" id="radioMultiply" (change)="updateChoice(3)">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <label for="radioDivide">Divide &nbsp;</label>
+            <input type="radio" name="calculation" id="radioDivide" (change)="updateChoice(4)">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="txtFirst">First Value: &nbsp;</label>
+            <input type="text" id="txtFirst" [value]="first" (keyup)="updateFirst(firstInput.value)" #firstInput>
+        </div>
+
+        <div>
+            <label for="txtSecond">Second Value: &nbsp;</label>
+            <input type="text" id="txtSecond" [value]="second" (keyup)="updateSecond(secondInput.value)" #secondInput>
+        </div>
+
+        <div class="center-style">
+            <input type="button" value="Calculate" (click)="calculate()">
+        </div>
+
+    </fieldset>
+</form>

@@ -9,4 +9,4 @@
 
 using NG tool to generate: 
 (root path is "app" directory)
-component: ng generate/g component/c 
+component: ng generate/g component/c parent --skip-tests --standalone false
