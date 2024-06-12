@@ -1,0 +1,23 @@
+1. clone/download the git repository and you will find
+a. product-service-backend app
+b. env.txt file
+c. backend-details.txt file in the "codes" directory
+
+2. open product-service-backend app in VS code
+3. type "npm install" in the terminal to install all the packages
+4. create ".env" file at the root of the folder
+5. copy the settings from "env.txt" file
+6. run the RESTful API server using "npm start" command
+
+detals of the service is in "backend-details.txt" file
+
+create an angular app: pms-app
+create a feature module forlder inside "app" directory: "products" containing "products.module.ts" file
+register the ProductsModule class with AppModule in "app.module.ts" file
+
+Now, create a component in  products/components/product-list folder
+Create a service "ProductService" in "product.service.ts" file
+create a method to fetch all products from the backend server
+
+register the service with ProductsModule class
+consume the service in ProductListComponent and display all the records in a table (display only image, name, price and rating of each product)
