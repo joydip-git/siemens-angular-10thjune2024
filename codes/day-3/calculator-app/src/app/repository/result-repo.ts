@@ -1,5 +1,7 @@
+import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 
+@Injectable()
 export class ResultRepository {
     private storage: BehaviorSubject<number>;
     storageAccessor: Observable<number>;

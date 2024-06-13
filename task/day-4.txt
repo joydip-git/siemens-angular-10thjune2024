@@ -1,0 +1,76 @@
+1. services
+
+	A. create a service:
+		i. class with reusable piece of logic (methods)
+		ii. decorate it with @Injectable()
+		Note: component, directive, pipe, module - they all declared with corresponding decorator function which autoamtaically appiles @Injectable() decorator on them. since service class need not to be declared with any decoartor as such, hence separately @Injectable() is required on them in order to do DI in the service class
+		
+	B. register a service provider:
+		a. at the component level
+		b. at feature module level
+		c. at root level
+
+		Note: @Injectable() decorator accepts an object, which has a property "providedIn" with value from 'root', 'any' or 'platform'. if you use the value 'root', that means the service will be registered with roor module (at the root level)
+
+	default service provider registration: 
+	providers:[ServiceClassName]
+	
+	you can do custom provider configuration:
+	providers:[
+		{
+			provide:TOKEN_NAME,
+			useClass:ServiceClassName
+			//useFactory: ()=>{}
+			//useValue:new ServiceClassName()
+			//useExisting:
+		}
+	]
+
+	C. consume a service:
+
+	any asset=>
+	constructor(private svc:ServiceClassName){
+	}
+
+	in case of custom service provider registration, use @Inject() decorator with constructor argument
+
+	private svc:ServiceClassName;
+	constructor(@Inject(TOKEN_NAME) svc:ServiceClassName){
+		this.svc = svc
+	}	
+
+	or
+	
+	constructor(@Inject(TOKEN_NAME) private svc:ServiceClassName){
+
+	}
+
+2. rxjs
+	a. objects: observable, observer
+	b. subject: Subject, BehaviorSubject, ReplaySubject, AsyncSubject
+	c. operators: map, filter, tap, take....
+
+3. HTTP:
+
+4. Pipe:
+	built-in: uppercase, lowercase, currency, async etc.
+
+	@Pipe({
+		name:'currency'
+	})
+	export class CurrencyPipe{
+		transform(value:any, ...args:any[]):any{	
+			return value && value !=='' ?value.toLocaleUppercase():value;
+		}
+	}
+
+	p.title|uppercase
+	p.id|currency:'INR':'1-2':''
+
+
+
+
+
+
+
+
