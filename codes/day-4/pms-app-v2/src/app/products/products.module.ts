@@ -8,6 +8,8 @@ import { FilterProductPipe } from './pipes/filter-product.pipe';
 import { ProductFilterComponent } from './components/product-filter/product-filter.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { RouterModule } from '@angular/router';
+import { productRoutes } from '../routes/routes';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     EditProductComponent
   ],
   imports: [
-    CommonModule, HttpClientModule
+    CommonModule,
+    HttpClientModule,
+    RouterModule.forChild(productRoutes)
   ],
   providers: [
     //ProductService

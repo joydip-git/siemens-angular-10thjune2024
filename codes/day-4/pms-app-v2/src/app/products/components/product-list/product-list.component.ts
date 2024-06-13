@@ -5,7 +5,7 @@ import { Product } from '../../models/product';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-product-list',
+  //selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
