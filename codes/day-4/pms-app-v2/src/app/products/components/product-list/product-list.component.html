@@ -26,7 +26,8 @@
             <tbody class="table-dark">
                 <tr *ngFor="let p of (products|filterProduct:filterText)">
                     <td>
-                        <img [src]="p.imageUrl" alt="NA" title="{{p.productName}}" class="img-style">
+                        <img [src]="p.imageUrl" alt="NA" title="{{p.productName}}" class="img-style"
+                            [routerLink]="['/products/view',p.productId]">
                     </td>
                     <td>
                         {{p.productName|uppercase}}
