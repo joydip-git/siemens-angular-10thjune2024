@@ -105,7 +105,9 @@
 
 		DashBoard
 
-		products/view/:id
+		products/view/:id/categories/:cid
+
+		http://localhost:4200/products/view/1/categories/1 {id:"1", cid:"1"}
 
 		
 

@@ -3,6 +3,8 @@ import { ProductListComponent } from "../products/components/product-list/produc
 import { AddProductComponent } from "../products/components/add-product/add-product.component";
 import { ProductDetailComponent } from "../products/components/product-detail/product-detail.component";
 import { EditProductComponent } from "../products/components/edit-product/edit-product.component";
+import { HomeComponent } from "../shared/components/home/home.component";
+import { PageNotFoundComponent } from "../shared/components/page-not-found/page-not-found.component";
 
 /*
 export const productRoutes: Route[] = [
@@ -48,4 +50,14 @@ export const productRoutes: Route[] = [
     }
 ]
 
-export const sharedRoutes: Route[] = []
+export const sharedRoutes: Route[] = [
+    {
+        path: 'home', component: HomeComponent
+    },
+    {
+        path: '', redirectTo: '/home', pathMatch: 'full'
+    },
+    {
+        path: '**', component: PageNotFoundComponent
+    }
+]
