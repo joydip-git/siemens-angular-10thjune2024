@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Post } from "../../models/post";
+import { Post } from "../../../models/post";
 
 @Pipe({
     name: 'sortPosts'

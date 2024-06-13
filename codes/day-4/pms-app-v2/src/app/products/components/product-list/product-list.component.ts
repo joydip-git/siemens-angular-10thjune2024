@@ -14,12 +14,16 @@ export class ProductListComponent implements OnInit, OnDestroy {
   products?: Product[];
   errorMessage = '';
   isFetchOver = false;
+  filterText = ''
   private sub?: Subscription;
 
   //private ps: ServiceContract;
   constructor(@Inject(PRODUCT_SERVICE_TOKEN) private ps: ServiceContract) {
     //this.ps = ps
     //this.ps = inject(ProductService)
+  }
+  updateFilterText(text: string) {
+    this.filterText = text
   }
   ngOnInit(): void {
     this.sub = this.ps.getAll().subscribe({

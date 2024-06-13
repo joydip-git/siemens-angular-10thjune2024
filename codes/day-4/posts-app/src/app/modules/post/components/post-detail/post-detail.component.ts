@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
-import { PostService } from '../../../services/post.service';
-import { Post } from '../../../models/post';
+import { PostService } from '../../../../services/post.service';
+import { Post } from '../../../../models/post';
 import { Subscription } from 'rxjs';
 
 @Component({

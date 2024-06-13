@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostService } from './services/post.service';
-import { PostModule } from './post/post.module';
+import { PostModule } from './modules/post/post.module';
+import { AppCommonModule } from './modules/app-common/app-common.module';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +14,10 @@ import { PostModule } from './post/post.module';
   imports: [
     BrowserModule,
     PostModule,
+    AppCommonModule,
     AppRoutingModule
   ],
-  // providers: [PostService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

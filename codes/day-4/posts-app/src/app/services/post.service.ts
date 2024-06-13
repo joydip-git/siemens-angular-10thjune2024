@@ -1,5 +1,4 @@
 import { HttpClient } from "@angular/common/http";
-import { posts } from "../data/posts";
 import { Post } from "../models/post";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
@@ -16,7 +15,6 @@ export class PostService {
         return obs
     }
     getPost(id: number): Observable<Post> {
-        //return posts.find(p => p.id === id)
         return this.http.get<Post>(`${this.url}/${id}`)
     }
 }

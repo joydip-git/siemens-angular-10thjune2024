@@ -4,11 +4,15 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PRODUCT_SERVICE_CLASS, PRODUCT_SERVICE_TOKEN } from '../config/constants';
+import { FilterProductPipe } from './pipes/filter-product.pipe';
+import { ProductFilterComponent } from './components/product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    FilterProductPipe,
+    ProductFilterComponent
   ],
   imports: [
     CommonModule, HttpClientModule

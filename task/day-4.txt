@@ -67,6 +67,48 @@
 	p.title|uppercase
 	p.id|currency:'INR':'1-2':''
 
+<app-product-filter></app-product-filter>
+<table>
+
+
+5. Routing
+	client-side routing
+	package: @angular/router
+	module: RouterModule
+
+	built-in types: 
+	a. Route => path='', component=
+	b. type Routes= Route[]
+
+	register the routes with a module
+
+	built-in service:
+	ActivatedRoute, Router
+
+	built-in directives:
+	router-outlet
+	routerLink
+
+	guard => functional and class
+
+	routes:
+		common:
+		http://localhost:4200/ => HomeComponent		
+		http://localhost:4200/home => HomeComponent		
+		http://localhost:4200/<anything-else> => PageNotFoundComponent		
+
+		post:
+		http://localhost:4200/posts => PostListComponent
+		http://localhost:4200/posts/1 => PostDetailComponent
+		http://localhost:4200/posts/add => AddPostComponent
+		http://localhost:4200/posts/edit/1 => UpdatePostComponent
+
+		
+
+	
+
+
+
 
 
 

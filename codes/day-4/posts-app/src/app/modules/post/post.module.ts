@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostListComponent } from './components/post-list/post-list.component';
-import { PostService } from '../services/post.service';
+import { PostService } from '../../services/post.service';
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostSortPipe } from './pipes/post-sort.pipe';
+import { UpdatePostComponent } from './components/update-post/update-post.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 @NgModule({
-  //registering components, pipes and directives ONLY
-  declarations: [PostListComponent, PostDetailComponent, PostSortPipe],
+  declarations: [PostListComponent, PostDetailComponent, PostSortPipe, UpdatePostComponent, AddPostComponent],
   //imports modules
   imports: [
     CommonModule, HttpClientModule
