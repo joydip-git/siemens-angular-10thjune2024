@@ -92,16 +92,20 @@
 	guard => functional and class
 
 	routes:
-		common:
+		shared:
 		http://localhost:4200/ => HomeComponent		
 		http://localhost:4200/home => HomeComponent		
 		http://localhost:4200/<anything-else> => PageNotFoundComponent		
 
-		post:
-		http://localhost:4200/posts => PostListComponent
-		http://localhost:4200/posts/1 => PostDetailComponent
-		http://localhost:4200/posts/add => AddPostComponent
-		http://localhost:4200/posts/edit/1 => UpdatePostComponent
+		products:
+		http://localhost:4200/products => ProductListComponent
+		http://localhost:4200/products/view/1 => ProductDetailComponent
+		http://localhost:4200/products/add => AddProductComponent
+		http://localhost:4200/products/edit/1 => EditProductComponent
+
+		DashBoard
+
+		products/view/:id
 
 		
 

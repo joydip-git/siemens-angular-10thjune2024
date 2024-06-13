@@ -6,13 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { PRODUCT_SERVICE_CLASS, PRODUCT_SERVICE_TOKEN } from '../config/constants';
 import { FilterProductPipe } from './pipes/filter-product.pipe';
 import { ProductFilterComponent } from './components/product-filter/product-filter.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
     FilterProductPipe,
-    ProductFilterComponent
+    ProductFilterComponent,
+    AddProductComponent,
+    EditProductComponent
   ],
   imports: [
     CommonModule, HttpClientModule
