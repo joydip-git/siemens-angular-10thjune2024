@@ -1,12 +1,13 @@
-<form>
+<form ngForm #regFrm="ngForm" (submit)="submit(regFrm)">
     <div>
         <label for="txtUser" class="form-label mt-4">UserName: &nbsp;</label>
-        <input type="text" id="txtUser" class="form-control">
+        <input name="username" type="text" id="txtUser" class="form-control" ngModel>
     </div>
     <div>
         <label for="txtPassword" class="form-label mt-4">Password: &nbsp;</label>
-        <input type="password" id="txtPassword" class="form-control">
+        <input name="password" type="password" id="txtPassword" class="form-control" ngModel>
     </div>
+    <br>
     <div>
         <input type="submit" value="Register" class="btn btn-primary">
     </div>

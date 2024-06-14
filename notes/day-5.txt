@@ -51,5 +51,22 @@ POST
 http://127.0.0.1:3003/auth/authenticate => {message: "", data:"hasQJDSHAGDHSAGC" }
 {"username":"", "password":""}
 
+export interface ValidationError{
+	[key:string]:any;
+}
+function required(control:AbstractControl):ValidationError|null{
+	if(control){
+		if(control.value==='')
+			return {required:true}
+		else
+			return null
+		
+	}else
+		return null
+}
+
+control.errors={required:true}
+
+
 
 

@@ -1,1 +1,34 @@
-<p>login works!</p>
+<form [formGroup]="loginFrm" (submit)="submit()">
+    <div>
+        <label for="txtUser" class="form-label mt-4">UserName: &nbsp;</label>
+        <input type="text" id="txtUser" class="form-control" formControlName="username">
+    </div>
+
+    <div *ngIf="username?.invalid && (username?.dirty||username?.touched)">
+        <span *ngIf="username?.errors?.['required']">
+            pleas enter username
+        </span>
+        <span *ngIf="username?.errors?.['email']">
+            please enter username in email id format
+        </span>
+    </div>
+
+    <div>
+        <label for="txtPassword" class="form-label mt-4">Password: &nbsp;</label>
+        <input type="password" id="txtPassword" class="form-control" formControlName="password">
+    </div>
+
+    <div *ngIf="password?.invalid && (password?.dirty||password?.touched)">
+        <span *ngIf="password?.errors?.['required']">
+            pleas enter password
+        </span>
+        <!-- <span *ngIf="password?.errors?.['email']">
+            please enter username in email id format
+        </span> -->
+    </div>
+
+    <br>
+    <div>
+        <input type="submit" value="Login" class="btn btn-primary" [disabled]="loginFrm.invalid">
+    </div>
+</form>
