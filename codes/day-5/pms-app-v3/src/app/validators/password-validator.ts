@@ -1,6 +1,5 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms"
 
-// type fnType = (control: AbstractControl) => ValidationErrors | null;
 export const passwordValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
     const val = control.value
     if (val) {

@@ -22,9 +22,18 @@
         <span *ngIf="password?.errors?.['required']">
             pleas enter password
         </span>
-        <!-- <span *ngIf="password?.errors?.['email']">
-            please enter username in email id format
-        </span> -->
+        <span *ngIf="password?.errors?.['lengthError']">
+            {{password?.errors?.['lengthError']}}
+        </span>
+        <span *ngIf="password?.errors?.['upperError']">
+            {{password?.errors?.['upperError']}}
+        </span>
+        <span *ngIf="password?.errors?.['lowerError']">
+            {{password?.errors?.['lowerError']}}
+        </span>
+        <span *ngIf="password?.errors?.['digitError']">
+            {{password?.errors?.['digitError']}}
+        </span>
     </div>
 
     <br>

@@ -6,10 +6,12 @@ types: FormControl, FormGroup
 a. control from handling from template: template-driven form
 module: FormsModule
 directives: ngModel, ngForm
+validator directives: required, email, etc.
 
 b. control from handling from code: reactive form
 module: ReactiveFormsModule
 directives: formControl, formGroup, formControlName, formGroupName
+validator functions: required, email, etc...
 
 
 
@@ -59,8 +61,7 @@ function required(control:AbstractControl):ValidationError|null{
 		if(control.value==='')
 			return {required:true}
 		else
-			return null
-		
+			return null		
 	}else
 		return null
 }

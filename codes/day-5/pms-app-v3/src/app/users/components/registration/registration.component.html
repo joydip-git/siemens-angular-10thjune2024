@@ -1,14 +1,46 @@
 <form ngForm #regFrm="ngForm" (submit)="submit(regFrm)">
     <div>
         <label for="txtUser" class="form-label mt-4">UserName: &nbsp;</label>
-        <input name="username" type="text" id="txtUser" class="form-control" ngModel>
+        <input name="username" type="text" id="txtUser" class="form-control" ngModel required email
+            #usernameInput="ngModel">
     </div>
+
+    <div *ngIf="usernameInput.control.invalid && (usernameInput.control.dirty|| usernameInput.control.touched)">
+        <span *ngIf="usernameInput.control.errors?.['required']">
+            pleas enter username
+        </span>
+        <span *ngIf="usernameInput.control.errors?.['email']">
+            please enter username in email id format
+        </span>
+    </div>
+
     <div>
         <label for="txtPassword" class="form-label mt-4">Password: &nbsp;</label>
-        <input name="password" type="password" id="txtPassword" class="form-control" ngModel>
+        <input name="password" type="password" id="txtPassword" class="form-control" ngModel required passwordvalidator
+            #passwordInput="ngModel">
     </div>
+
+    <div *ngIf="passwordInput.control.invalid && (passwordInput.control.dirty||passwordInput.control.touched)">
+        <span *ngIf="passwordInput.control.errors?.['required']">
+            pleas enter password
+        </span>
+
+        <span *ngIf="passwordInput.control.errors?.['lengthError']">
+            {{passwordInput.control.errors?.['lengthError']}}
+        </span>
+        <span *ngIf="passwordInput.control.errors?.['upperError']">
+            {{passwordInput.control.errors?.['upperError']}}
+        </span>
+        <span *ngIf="passwordInput.control.errors?.['lowerError']">
+            {{passwordInput.control.errors?.['lowerError']}}
+        </span>
+        <span *ngIf="passwordInput.control.errors?.['digitError']">
+            {{passwordInput.control.errors?.['digitError']}}
+        </span>
+    </div>
+
     <br>
     <div>
-        <input type="submit" value="Register" class="btn btn-primary">
+        <input type="submit" value="Register" class="btn btn-primary" [disabled]="regFrm.form.invalid">
     </div>
 </form>
