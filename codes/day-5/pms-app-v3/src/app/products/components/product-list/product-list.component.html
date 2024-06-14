@@ -21,6 +21,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Rating</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody class="table-dark">
@@ -37,6 +38,9 @@
                     </td>
                     <td>
                         {{p.starRating}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" (click)="delete(p.productId)">Delete</button>
                     </td>
                 </tr>
             </tbody>

@@ -7,6 +7,8 @@ import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { UsersModule } from './users/users.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptorService } from './interceptors/request-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import { UsersModule } from './users/users.module';
     RouterModule
     //AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

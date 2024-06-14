@@ -7,6 +7,7 @@ import { HomeComponent } from "../shared/components/home/home.component";
 import { PageNotFoundComponent } from "../shared/components/page-not-found/page-not-found.component";
 import { LoginComponent } from "../users/components/login/login.component";
 import { RegistrationComponent } from "../users/components/registration/registration.component";
+import { authGuard } from "../guards/auth.guard";
 
 /*
 export const productRoutes: Route[] = [
@@ -31,6 +32,7 @@ export const productRoutes: Route[] = [
 export const productRoutes: Route[] = [
     {
         path: 'products',
+        canActivate: [authGuard],
         children: [
             {
                 path: '',
