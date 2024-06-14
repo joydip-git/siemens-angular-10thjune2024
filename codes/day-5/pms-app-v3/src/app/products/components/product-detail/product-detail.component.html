@@ -1,0 +1,21 @@
+<ng-template #loadingTemplate>
+    <span>Loading...</span>
+</ng-template>
+<ng-template #errorTemplate>
+    {{errorMessage}}
+</ng-template>
+<ng-template #norecordRemplate>
+    <span>no records</span>
+</ng-template>
+
+<div *ngIf="isFetchOver;else loadingTemplate">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <div *ngIf="product;else norecordRemplate">
+            <h3>
+                Details of: &nbsp;{{product.productName}}
+            </h3>
+            <br>
+            <button type="button" class="btn btn-primary" (click)="navigate(product.productId)">Edit</button>
+        </div>
+    </div>
+</div>

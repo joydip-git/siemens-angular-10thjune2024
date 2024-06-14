@@ -42,3 +42,14 @@ mainForm = new FormGroup({
 
 </form>
 
+
+POST
+http://127.0.0.1:3003/auth/register => {message: "", data:{} }
+{"username":"", "password":""}
+
+POST
+http://127.0.0.1:3003/auth/authenticate => {message: "", data:"hasQJDSHAGDHSAGC" }
+{"username":"", "password":""}
+
+
+

@@ -1,0 +1,45 @@
+<ng-template #loadingTemplate>
+    <span>Loading...</span>
+</ng-template>
+<ng-template #errorTemplate>
+    {{errorMessage}}
+</ng-template>
+<ng-template #norecordRemplate>
+    <span>no records</span>
+</ng-template>
+
+<div *ngIf="isFetchOver;else loadingTemplate">
+    <div *ngIf="errorMessage==='';else errorTemplate">
+        <h2 class="text-muted">List of Products</h2>
+        <br>
+        <app-product-filter (filterTextChanged)="updateFilterText($event)"></app-product-filter>
+        <br>
+        <table *ngIf="products && products.length>0" class="table table-hover">
+            <thead class="header-style">
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody class="table-dark">
+                <tr *ngFor="let p of (products|filterProduct:filterText)">
+                    <td>
+                        <img [src]="p.imageUrl" alt="NA" title="{{p.productName}}" class="img-style"
+                            [routerLink]="['/products/view',p.productId]">
+                    </td>
+                    <td>
+                        {{p.productName|uppercase}}
+                    </td>
+                    <td>
+                        {{p.price|currency:'INR'}}
+                    </td>
+                    <td>
+                        {{p.starRating}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
