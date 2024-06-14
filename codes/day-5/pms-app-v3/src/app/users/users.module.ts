@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { userRoutes } from '../routes/routes';
 import { PasswordValidatorDirective } from './directives/password-validator.directive';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PasswordValidatorDirective } from './directives/password-validator.dire
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(userRoutes)
-  ]
+  ],
+  providers: [UserService]
 })
 export class UsersModule { }
