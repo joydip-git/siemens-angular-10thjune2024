@@ -1,0 +1,31 @@
+<!-- <form ngForm>
+    <div>
+        <label for="txtFirst">First: &nbsp;</label>
+        <input type="text" name="firstInput" id="txtFirst" [(ngModel)]="first">
+    </div>
+    <div>
+        <label for="txtSecond">Second: &nbsp;</label>
+        <input type="text" name="secondInput" id="txtSecond" [(ngModel)]="second">
+    </div>
+    <div>
+        <input type="submit" value="Calculate" (click)="calculate()">
+    </div>
+</form>
+<br>
+<span>Result: &nbsp; {{result}}</span> -->
+
+<form ngForm #frm="ngForm" (submit)="calculate(frm)">
+    <div>
+        <label for="txtFirst">First: &nbsp;</label>
+        <input type="text" name="firstInput" id="txtFirst" ngModel>
+    </div>
+    <div>
+        <label for="txtSecond">Second: &nbsp;</label>
+        <input type="text" name="secondInput" id="txtSecond" ngModel>
+    </div>
+    <div>
+        <input type="submit" value="Calculate">
+    </div>
+</form>
+<br>
+<span>Result: &nbsp; {{result}}</span>

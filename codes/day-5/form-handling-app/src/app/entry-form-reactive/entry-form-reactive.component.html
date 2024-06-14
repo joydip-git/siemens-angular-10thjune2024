@@ -1,0 +1,17 @@
+<form [formGroup]="calculatorForm" (submit)="calculate()">
+    <div>
+        <label for="txtFirst">First: &nbsp;</label>
+        <!-- <input type="text" id="txtFirst" [formControl]="firstInput"> -->
+        <input type="text" id="txtFirst" formControlName="firstInput">
+    </div>
+    <div>
+        <label for="txtSecond">Second: &nbsp;</label>
+        <!-- <input type="text" id="txtSecond" [formControl]="secondInput"> -->
+        <input type="text" id="txtSecond" formControlName="secondInput">
+    </div>
+    <div>
+        <input type="submit" value="Calculate">
+    </div>
+</form>
+<br>
+<span>Result: &nbsp; {{result}}</span>

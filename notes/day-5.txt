@@ -1,0 +1,44 @@
+handling form in angular
+
+package: @angular/forms
+types: FormControl, FormGroup
+
+a. control from handling from template: template-driven form
+module: FormsModule
+directives: ngModel, ngForm
+
+b. control from handling from code: reactive form
+module: ReactiveFormsModule
+directives: formControl, formGroup, formControlName, formGroupName
+
+
+
+<form ngForm (submit)="submit(frm)" #frm="ngForm">
+	<input name="firstInput" type = 'text'  ngModel #first="ngModel">
+	<input name="secondInput" type = 'text' ngModel>
+
+	<button type='submit'>
+</form>
+
+submit(frm:NgForm){
+ const frmGroup:FormGroup = frm.form
+// frmGroup.controls["firstInput"].value
+	frmGroup.value
+}
+
+mainForm = new FormGroup({
+	form1:new FormGroup({c1:new FormControl(0)})
+})
+<form [formGroup]=""mainForm">
+	<form formGroupName="form1">
+		<input type ='' formControlName="c1">
+	</form>
+
+	<form>
+	</form>
+
+	<form>
+	</form>
+
+</form>
+
